@@ -1,0 +1,34 @@
+name: Decision or research
+description: A question to settle. Closed by recording the answer, not by code.
+labels: ["type:task"]
+body:
+  - type: markdown
+    attributes:
+      value: Set area and priority labels, the parent Feature, and dependencies (Blocked by) in the sidebar, not in the text.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options known so far
+  - type: textarea
+    id: settled-by
+    attributes:
+      label: What settles it
+      description: The measurement, document, or test whose result decides the question.
+    validations:
+      required: true
+  - type: dropdown
+    id: record
+    attributes:
+      label: Record the answer in
+      options:
+        - docs/adr (new ADR)
+        - CONTEXT.md
+        - docs/
+    validations:
+      required: true

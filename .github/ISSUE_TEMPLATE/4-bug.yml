@@ -1,0 +1,43 @@
+name: Bug
+description: Something the project does wrong.
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Set area and priority labels in the sidebar. Do not paste secrets or private data; give the location instead.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag or commit.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1. 
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The wrong value, error, or step where it stopped. Quote the shortest decisive line.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What was expected
+      description: The right result and where it is stated (docs, ADR, issue).
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      value: |
+        - OS:
+        - Python:

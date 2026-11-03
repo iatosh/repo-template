@@ -1,0 +1,33 @@
+name: Task
+description: One piece of work that ends in one pull request.
+labels: ["type:task"]
+body:
+  - type: markdown
+    attributes:
+      value: Set area and priority labels, the parent Feature, and dependencies (Blocked by) in the sidebar, not in the text.
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: What changes and why.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Checks that someone else can run. Leave nothing to judgment.
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this task must not touch, even if it looks related.
+  - type: textarea
+    id: design
+    attributes:
+      label: Design references
+      description: Full links to docs on main (CONTEXT.md, ADRs). Plain text such as "ADR-0002" is not linked.
